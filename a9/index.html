@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<html>
+  <head>
+    <title>A9 - Jeff Lee</title>
+
+    <!-- Style the page -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../shared/handsfree.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;1,500&family=Questrial&family=Work+Sans:ital,wght@0,300;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <script src="https://unpkg.com/handsfree@8.1.1/build/lib/handsfree.js"></script> -->
+    <script src="../shared/handsfree-8.4.2.js"></script>
+    <!-- 
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
+  	<script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+ -->
+
+    <script src="vector.js"></script>
+
+    <script src="../shared/handsfree-utilities.js"></script>
+    <script src="../shared/delaunay-utilities.js"></script>
+    <script src="../shared/neatjson.js"></script>
+    <script src="../shared/vue.js"></script>
+    <script src="../shared/p5.min.js"></script>
+    <script src="../shared/delaunator.min.js"></script>
+
+    <!-- recorded face & hand data of me, Dr. Kate! -->
+    <script src="../shared/testfacedata.js"></script>
+    <script src="../shared/testhanddata.js"></script>
+
+    <script src="face-styles.js"></script>
+
+    <script src="app.js"></script>
+    <script src="../a2/colors.js"></script>
+
+    <!-- Face styles -->
+    <script src="face-bluespirit.js"></script>
+  </head>
+
+  <body>
+    <nav>
+      <a href="../index.html" id="roster-btn">
+        <p id="roster-arrow">&laquo</p>
+        <p id="roster-text">home</p>
+      </a>
+    </nav>
+    <div id="main-column">
+      <h1 id="main-header" class="header" onclick="toggleColors()">
+        A9: Virtual Costumes
+      </h1>
+      <div class="main-row">
+        <div id="controls"></div>
+
+        <div id="app"></div>
+      </div>
+    </div>
+  </body>
+</html>

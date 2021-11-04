@@ -1,0 +1,423 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+:root {
+   --main-color:#8d99ae;
+   --secondary-color:#D6E0E3; 
+   --content-color:#2b2d42;
+   --large-text: 4.5rem;
+   --big-text: 3rem;
+   --normal-text: 1.6rem;
+   --smaller-text: 1.2rem;
+   --main-font: 'Work Sans', serif;
+   --title-font: 'Questrial', serif;
+}
+
+body {
+    background-color: var(--main-color);
+    width: 100%;
+    overflow-x: hidden;
+}
+
+nav {
+    height: 8rem; 
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+#roster-btn {
+    text-decoration: none;
+    color: var(--content-color);
+    margin-left: 10%;
+    font-family: 'Work Sans', serif;
+    font-size: 2.2rem;
+    display: flex;
+}
+#roster-text {
+    margin-left: 0.5rem;
+}
+
+#roster-btn:hover #roster-arrow {
+    animation: shifty 1s ease-in-out infinite; 
+}
+
+
+
+.text {
+    color: var(--content-color);
+    font-family: 'Work Sans', serif;
+    text-transform: lowercase;
+    font-weight: 300;
+    font-size: var(--normal-text);
+}
+
+.header {
+    font-family: 'Questrial', serif;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+
+
+#main-header {
+    color: var(--secondary-color);
+    font-size: var(--large-text);
+    width: 100%;
+    text-align: center;
+    cursor: pointer
+}
+
+#main-column {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+
+.label {
+    font-family: "Questrial";
+    font-size: var(--normal-text);
+    color: var(--secondary-color)
+}
+
+.title {
+    font-family: 'Questrial', serif;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: var(--normal-text);
+}
+
+.sliders {
+    width: 40%;
+    margin-top: 0.4rem;
+    margin-right: 1rem;
+}
+.slider-val {
+    font-family: "work sans";
+    font-size: var(--smaller-text);
+    font-weight: bold;
+}
+
+#main-wrapper {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.columns {
+    width: 80%;
+}
+.controls {
+    display: flex; 
+    flex-flow: row nowrap;
+    margin: 1rem 0rem 0.5rem 0rem;
+}
+
+.column {
+    margin-top: 3rem
+}
+.row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.chosenyr {
+    font-size: var(--big-text);
+    color:var(--secondary-color);
+    font-weight: bold;
+    margin-bottom: -2rem;
+    margin-top: 1rem;
+}
+.controls {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.statstext {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    height: 3rem;
+    margin: 1rem 0;
+}
+
+.textlabel {
+    color: var(--secondary-color);
+    font-family: var(--title-font);
+    font-weight: normal;
+    font-size: var(--normal-text);
+    text-transform: uppercase;
+}
+
+.marg {
+    margin-left: 4rem;
+}
+
+.datatext {
+    color: var(--content-color);
+    font-family: var(--main-font);
+    font-size: var(--normal-text);
+    margin-left: 1rem;
+}
+
+button {
+    width: fit-content;
+    background-color: var(--content-color);
+    border-radius: 0.5rem;
+    border: var(--content-color) solid 3px;
+    font-family: "Work Sans";
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--secondary-color);
+    padding: 0.2rem 0.4rem;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items:center;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.checkbox-label {
+    font-family: var(--main-font);
+    font-size: var(--smaller-text);
+    font-weight: bold;
+    color: var(--content-color)
+}
+
+.main-color {
+    color: var(--main-color)
+}
+
+.secondary-color {
+    color: var(--secondary-color)
+}
+
+.content-color {
+    color: var(--content-color)
+}
+/* Styling Checkboxes from https://www.paulund.co.uk/how-to-style-a-checkbox-with-css */
+.checkbox {
+    width: 25px;
+    position: relative;
+    margin-left: 1rem;
+}
+
+.checkbox label {
+    cursor: pointer;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 0;
+    left: 0;
+    background: var(--main-color);
+    border:1px solid var(--content-color);
+    border-radius: 3px;
+}
+
+.checkbox label:after {
+    opacity: 0.2;
+    content: '';
+    position: absolute;
+    width: 9px;
+    height: 5px;
+    background: transparent;
+    top: 6px;
+    left: 7px;
+    border: 3px solid var(--content-color);
+    border-top: none;
+    border-right: none;
+
+    transform: rotate(-45deg);
+}
+.checkbox label:hover::after {
+    opacity: 0.5;
+}
+
+/**
+ * Create the checkbox state for the tick
+ */
+ .checkbox input[type=checkbox]:checked + label:after {
+    opacity: 1;
+}
+
+.guide-modal {
+    position:absolute;
+    top: -100rem;
+    left: 20%;
+    transform: translateY(0);
+    transition: all 0.8s ease-out;
+    width: 60%;
+}
+
+.guide-text-wrapper {
+    width: 100%;
+    background-color: var(--main-color);
+    padding: 4rem 8%;
+    border-radius: 1rem;
+    border: 0.3rem solid var(--content-color)
+}
+
+.guide-text-wrapper h1 {
+    font-family: var(--title-font);
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+}
+
+.guide-text-wrapper ul {
+    list-style: none;
+}
+
+.guide-item {
+    font-family: var(--main-font);
+    text-transform: lowercase;
+    color: var(--content-color);
+    font-size: calc(var(--smaller-text)* 1.2);
+    font-weight: 400;
+    margin-top: 1rem;
+}
+
+.xbut {
+    font-family: var(--title-font);
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+    transform: translateY(-1rem);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.guide-header {
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.guideActive {
+    transform: translateY(106rem);
+}
+
+
+
+/* https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/ */
+input[type=range] {
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+    width: 100%; /* Specific width is required for Firefox. */
+    background: transparent; /* Otherwise white in Chrome */
+  }
+  
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+  }
+  
+  input[type=range]:focus {
+    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+  }
+  
+
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 38px;
+    width: 10px;
+    border-radius: 2px;
+    background: var(--secondary-color);
+    cursor: pointer;
+    margin-top: -9px; 
+  }
+  
+  /* All the same stuff for Firefox */
+  input[type=range]::-moz-range-thumb {
+    -webkit-appearance: none;
+    height: 38px;
+    width: 10px;
+    border-radius: 2px;
+    background: var(--secondary-color);
+    cursor: pointer;
+    margin-top: -11px; 
+  }
+  
+
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 20px;
+    cursor: pointer;
+    background: var(--content-color);
+    border-radius: 2px;
+  }
+  
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: var(--content-color);
+  }
+  
+  input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 20px;
+    cursor: pointer;
+    background: var(--content-color);
+    border-radius: 2px;
+  }
+
+
+@keyframes shifty {
+    0% {
+        transform: translateX(0) ;
+    }
+    50% {
+        transform: translateX(-.2rem);
+    }
+    100% {
+        transform: translateX(0) ;
+    }
+}
+
+
+
+@media screen and (max-width: 1650px) {
+    :root {
+        --large-text: 3rem;
+        --big-text: 2.5rem;
+        --normal-text: 1.5rem;
+    }
+  }
+
+
+  @media screen and (max-width: 1400px) {
+    :root {
+        --large-text: 2.5rem;
+        --big-text: 2.5rem;
+        --normal-text: 1.4rem;
+        --smaller-text: 1rem;
+    }
+    #page-wrapper {
+        justify-content: center;
+        text-align: center;
+    }
+    #first-col {
+        width: 80%
+    }
+    .chat-widget {
+        width: 100%
+    }
+    .menu {
+        width: 80%;
+        margin-top: 3rem; 
+    }
+    #dividerline {
+        display: none;
+    }
+  }
+
+

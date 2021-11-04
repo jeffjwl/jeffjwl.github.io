@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<html>
+  <head>
+    <title>A2 - Animated GIF</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;1,500&family=Questrial&family=Work+Sans:ital,wght@0,300;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="colors.js"></script>
+    <script src="../shared/p5.min.js"></script>
+    <script src="animations.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <nav>
+      <a href="../index.html" id="roster-btn">
+        <p id="roster-arrow">&laquo</p>
+        <p id="roster-text">home</p>
+      </a>
+    </nav>
+    <div id="page-wrapper">
+      <div class="container divider1">
+        <div class="text-wrapper">
+          <h1 class="header" id="main-header">
+            A2: <br />
+            Animated Gif
+          </h1>
+        </div>
+        <button id="clicker" onclick="toggleColors()">
+          <span class="text" id="btn-text">change the colors</span>
+        </button>
+      </div>
+      <div id="dividerline"></div>
+      <div id="main"></div>
+    </div>
+  </body>
+</html>

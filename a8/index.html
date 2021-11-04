@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<html>
+  <head>
+    <title>A8 - Jeff Lee</title>
+
+    <!-- Style the page -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;1,500&family=Questrial&family=Work+Sans:ital,wght@0,300;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="../shared/vue.js"></script>
+    <!-- <script src="../shared/simplex-noise.js"></script> -->
+    <script src="../a2/colors.js"></script>
+    <script src="../shared/p5.min.js"></script>
+
+    <script src="../a8/data/alldata.js"></script>
+    <script src="../shared/data/goodreads-books.js"></script>
+    <script src="../shared/data/nyc_dogs.js"></script>
+
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <nav>
+      <a href="../index.html" id="roster-btn">
+        <p id="roster-arrow">&laquo</p>
+        <p id="roster-text">home</p>
+      </a>
+    </nav>
+    <div id="main-wrapper">
+      <h1 id="main-header" class="header" onclick="toggleColors()">
+        A8: Big Data Visualization
+      </h1>
+
+      <div id="app"></div>
+    </div>
+  </body>
+</html>

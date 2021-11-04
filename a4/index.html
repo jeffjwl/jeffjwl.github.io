@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<html>
+  <head>
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Gorditas&display=swap" rel="stylesheet">
+	-->
+    <title>A4 - Jeff Lee</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;1,500&family=Questrial&family=Work+Sans:ital,wght@0,300;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Or P5 loaded locally -->
+    <script src="../shared/p5.min.js"></script>
+
+    <script src="../a2/colors.js"></script>
+    <script src="vector.js"></script>
+    <script src="curve.js"></script>
+
+    <!-- Create particle systems here -->
+    <script src="particles-basic.js"></script>
+    <script src="particles-bugs.js"></script>
+    <script src="particles-boids.js"></script>
+    <script src="particles-springs.js"></script>
+    <script src="particles-food.js"></script>
+    <script src="particles-dung-beetle.js"></script>
+    <script src="particles-predator.js"></script>
+
+    <!-- My app's code goes last, 
+			because it needs to refer to things in the previous two JS files -->
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <nav>
+      <a href="../index.html" id="roster-btn">
+        <p id="roster-arrow">&laquo</p>
+        <p id="roster-text">home</p>
+      </a>
+    </nav>
+    <div id="page-wrapper">
+      <div class="text-wrapper">
+        <h1 class="header" id="main-header">A4: Swarms</h1>
+      </div>
+      <div id="main-column">
+        <div id="sliders"></div>
+        <div id="main">
+          <!-- Processing gets installed here -->
+        </div>
+
+        <div class="controls">
+          <div id="toggles"></div>
+        </div>
+      </div>
+
+      <div id="heatmap"></div>
+    </div>
+  </body>
+</html>

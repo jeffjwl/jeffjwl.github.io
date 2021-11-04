@@ -1,0 +1,138 @@
+/* Styles for a basic chat app */
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+:root {
+   --main-color:#8d99ae;
+   --secondary-color:#D6E0E3; 
+   --content-color:#2b2d42;
+   --large-text: 4.5rem;
+   --big-text: 4rem;
+   --normal-text: 3rem;
+}
+
+
+#app {
+	padding: 10px;
+	display: flex;
+	flex-direction: row;
+	flex: 1;
+}
+
+.chat-widget {
+	overflow: hidden;
+	margin: 0px auto;
+	width: 600px;
+	flex: 1;
+	border-radius: 14px;
+	padding: 5px;
+	display: flex;
+	flex-direction: column;
+}
+
+.chat-widget>.messages {
+	overflow-y: scroll;
+	overflow-x: hidden;
+	flex: 1;
+	border-radius: 10px;
+	box-shadow: inset 0px 1px 4px rgba(0, 0, 0, .4);
+	background-color: var(--main-color);
+	padding: 0 1rem;
+	text-align: left;
+}
+
+.chat-row	 {
+	align-items: flex-end;
+	position: relative;
+	display: flex;
+	flex-direction: row-reverse;
+	margin: 0.8rem 0;
+}
+
+.chat-owner	 {
+	position: relative;
+	bottom: -14px;
+	margin: 3px;
+	padding: 3px 6px;
+	border-radius: 20px;
+	vertical-align: bottom;
+}
+.chat-message {
+	display: inline-block;
+	padding: 5px 12px;
+	margin: 4px;
+	border-radius: 20px 20px 0px 20px;
+	font-size: 1.5rem;
+	font-family: "Work Sans";
+}
+.bot {
+	background: var(--secondary-color);	
+}
+.bot p {
+	color: var(--content-color);
+}
+
+.bot-face path {
+	fill: var(--secondary-color)
+}
+.bot-face ellipse {
+	fill: var(--content-color)
+}
+
+.customer {
+	background: var(--content-color);	
+}
+.customer p {
+	color: var(--secondary-color);
+}
+
+.customer-face path {
+	fill: var(--content-color)
+}
+.customer-face ellipse {
+	fill: var(--secondary-color)
+}
+
+
+.chat-row.self {
+	flex-direction: row;
+}
+.chat-row.self .chat-message {
+	border-radius: 20px 20px 20px 0px;
+}
+
+.chat-row.chat-msg-alert {
+	color: hsla(0, 100%, 50%, 1);
+	justify-content: space-around;
+}
+
+.chat-row.chat-msg-alert .chat-message {
+	border: none;
+	border-radius: 10px;
+	background-color: hsla(0, 100%, 90%, 1);	
+}
+
+
+
+/* Adapted from https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp */
+::-webkit-scrollbar {
+	width: 10px;
+	
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+	background-color: var(--main-color);
+	box-shadow: inset 0px 0px 3px rgba(0, 0, 0, .4);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+	background: var(--content-color)
+  }

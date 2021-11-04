@@ -1,0 +1,231 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+:root {
+   --main-color:#8d99ae;
+   --secondary-color:#D6E0E3; 
+   --content-color:#2b2d42;
+   --large-text: 4.5rem;
+   --big-text: 3rem;
+   --normal-text: 1.6rem;
+   --smaller-text: 1.2rem;
+}
+
+body {
+    background-color: var(--main-color);
+    width: 100%;
+    overflow-x: hidden;
+}
+
+nav {
+    height: 8rem; 
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+#roster-btn {
+    text-decoration: none;
+    color: var(--content-color);
+    margin-left: 10%;
+    font-family: 'Work Sans', serif;
+    font-size: 2.2rem;
+    display: flex;
+}
+#roster-text {
+    margin-left: 0.5rem;
+}
+
+#roster-btn:hover #roster-arrow {
+    animation: shifty 1s ease-in-out infinite; 
+}
+
+#page-wrapper {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    padding-top: 1rem;
+    padding: 0 0 0 10%;
+}
+
+
+
+#dividerline {
+    background-color: var(--content-color);
+    height: 70vh;
+    width: 2px;
+    margin: 0 5%;
+}
+.text-wrapper {
+    width: 100%;
+
+}
+
+.text {
+    color: var(--content-color);
+    font-family: 'Work Sans', serif;
+    text-transform: lowercase;
+    font-weight: 300;
+    font-size: var(--normal-text);
+}
+
+.header {
+    font-family: 'Questrial', serif;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+#main-header {
+    color: var(--secondary-color);
+    font-size: var(--large-text)
+}
+
+
+
+#app {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+#first-col {
+    display: flex;
+    flex-flow: column nowrap;
+
+}
+
+#menu-header {
+    font-size: var(--big-text);
+    text-decoration: solid underline var(--content-color) 2px;
+    color: var(--content-color);
+    margin-top: 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#main-column {
+    text-align: center;
+}
+
+#first-col {
+    height: 70vh;
+}
+
+#inputs-wrapper {
+    height: 3rem;
+    display: flex;
+    flex-flow: row nowrap;
+}
+#text-input {
+    width: 80%;
+    font-family: "Work Sans";
+    border-radius: 0.5rem 0 0 0.5rem;
+    border: var(--content-color) solid 3px;
+    background-color: var(--main-color);
+    font-size: var(--normal-text);
+    box-shadow: inset 0px 0px 4px rgba(0, 0, 0, .6);
+}
+
+#submit {
+    width: 19%;
+    background-color: var(--content-color);
+    border-radius: 0 0.5rem 0.5rem 0;
+    border: var(--content-color) solid 3px;
+    text-transform: uppercase;
+    font-family: "Work Sans";
+    font-style: italic;
+    font-size: var(--smaller-text);
+    color: var(--secondary-color)
+}
+
+.menu {
+    width: 30%;
+    min-width: 300px;
+    background-color: var(--secondary-color);
+    padding: 0 3rem;
+    padding-bottom: 2rem;
+    border-radius: 1rem;
+    text-align: left;
+}
+
+.menu-item {
+    margin-top: 0.5rem;
+}
+.menu-item:hover {
+    color: var(--main-color);
+    transition: color 0.2s ease-in-out;
+    
+}
+
+#buttons-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+#buttons-wrapper button {
+    background-color: var(--content-color);
+    border-radius: 0.5rem;
+    border: var(--content-color) solid 3px;
+    font-family: "Work Sans";
+    font-style: italic;
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    padding: 0.2rem 0.4rem;
+    margin: 0 1rem;
+    font-weight: 300;
+}
+
+@keyframes shifty {
+    0% {
+        transform: translateX(0) ;
+    }
+    50% {
+        transform: translateX(-.2rem);
+    }
+    100% {
+        transform: translateX(0) ;
+    }
+}
+
+
+
+@media screen and (max-width: 1650px) {
+    :root {
+        --large-text: 3rem;
+        --big-text: 2.5rem;
+        --normal-text: 1.5rem;
+    }
+  }
+
+
+  @media screen and (max-width: 1400px) {
+    :root {
+        --large-text: 2.5rem;
+        --big-text: 2.5rem;
+        --normal-text: 1.4rem;
+        --smaller-text: 1rem;
+    }
+    #page-wrapper {
+        justify-content: center;
+        text-align: center;
+    }
+    #first-col {
+        width: 80%
+    }
+    .chat-widget {
+        width: 100%
+    }
+    .menu {
+        width: 80%;
+        margin-top: 3rem; 
+    }
+    #dividerline {
+        display: none;
+    }
+  }
+
+

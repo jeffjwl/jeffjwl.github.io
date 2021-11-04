@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<html>
+  <head>
+    <title>A5 - Jeff Lee</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;1,500&family=Questrial&family=Work+Sans:ital,wght@0,300;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Style the chat -->
+    <link rel="stylesheet" href="chat.css" />
+
+    <!-- Style the page -->
+    <!-- <link rel="stylesheet" href="page.css"> -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <script src="../shared/vue.js"></script>
+
+    <!-- Tracery things -->
+    <script src="../shared/test-grammars.js"></script>
+    <script src="../shared/tracery-1.0.js"></script>
+    <script src="../shared/tracery-1.0-mods-eng-basic.js"></script>
+
+    <script src="v-chat.js"></script>
+    <script src="numbers.js"></script>
+    <!-- add your bot code -->
+    <script src="drivethrubot.js"></script>
+    <script src="dtgrammar.js"></script>
+
+    <!-- My app's code goes last, 
+		because it needs to refer to things in the previous two JS files -->
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <nav>
+      <a href="../index.html" id="roster-btn">
+        <p id="roster-arrow">&laquo</p>
+        <p id="roster-text">home</p>
+      </a>
+    </nav>
+    <div id="main-column">
+      <h1 id="main-header" class="header">two star yelp review drive thru</h1>
+
+      <div id="app"></div>
+    </div>
+  </body>
+</html>
