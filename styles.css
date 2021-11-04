@@ -280,4 +280,41 @@ nav {
     }
   }
 
+  @media screen and (max-width: 400px) {
+    :root {
+        --large-text: 2.5rem;
+        --big-text: 2rem;
+        --normal-text: 1.5rem;
+    }
+    #page-wrapper {
+        justify-content: center;
+    }
+    nav {
+        height: 1rem;
+    }
+    .text-wrapper {
+        padding: 0 20%;
+    }
+    .container {
+        width: 60%;
+    }
+    .divider1 {
+        width: 80%;
+    }
+    #project {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+    #projects-list {
+        margin: 2rem 0 0 0;
+    }
+    .divider2 {
+        margin-top: 5rem;
+    }
+    #dividerline {
+        display: none;
+    }
+  }
+
 
