@@ -280,7 +280,7 @@ nav {
     }
   }
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 500px) {
     :root {
         --large-text: 2.5rem;
         --big-text: 2rem;
